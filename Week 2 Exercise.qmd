@@ -28,6 +28,8 @@ In archaeology, it's always good to center place in every beginning of the repor
 
     AUTHOR NAMES recorded stone artifacts (n = \_\_\_\_\_\_) from WHERE (TIME PERIOD). They recorded traits like (TRAIT 1), (TRAIT 2), (TRAIT 3).
 
+-   [ ] Benjamin et al. recorded stone artifacts (n = 46 ) from the continental shelf located off of the Murjani coastline of western austrilia, lithics were dated around 7000 cal BP - 8500 cal BP. The recorded traits such as color, width, and flake shape.
+
     hint: for AUTHOR NAMES, you can write something like 'FIRST AUTHOR'S LAST NAME et al.' or 'FIRST AUTHOR'S LAST NAME and colleagues'.
 
 -   [ ] After writing that into your report, create a new subheading (a heading 3) in your report. You can do this by starting the line with three hashtags. Label this heading 'Traits'
