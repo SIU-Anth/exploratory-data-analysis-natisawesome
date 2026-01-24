@@ -1,6 +1,6 @@
 ---
-title: "Week 2: Basic Data Reporting"
-author: "Stantis"
+title: "Austrialian Stone Artifact Data Analysis "
+author: "Natalie Eves"
 format: html
 editor: visual
 ---
@@ -28,13 +28,15 @@ In archaeology, it's always good to center place in every beginning of the repor
 
     AUTHOR NAMES recorded stone artifacts (n = \_\_\_\_\_\_) from WHERE (TIME PERIOD). They recorded traits like (TRAIT 1), (TRAIT 2), (TRAIT 3).
 
--   [ ] Benjamin et al. recorded stone artifacts (n = 46 ) from the continental shelf located off of the Murjani coastline of western austrilia, lithics were dated around 7000 cal BP - 8500 cal BP. The recorded traits such as color, width, and flake shape.
+-   [ ] 
 
     hint: for AUTHOR NAMES, you can write something like 'FIRST AUTHOR'S LAST NAME et al.' or 'FIRST AUTHOR'S LAST NAME and colleagues'.
 
 -   [ ] After writing that into your report, create a new subheading (a heading 3) in your report. You can do this by starting the line with three hashtags. Label this heading 'Traits'
 
 -   [ ] In subheading 'Traits', write at least one sentence about each of the three traits you've chosen. Note the name of the trait, the type of data (of the four types), units (if applicable). In actual reports, you'd rarely note the type of data it is, but let's do it to practice.
+
+-   [ ] 
 
     Example: Thickness refers to the maximum thickness of the artifact. A continuous trait, thickness was measured in centimeters. Platform Surface (Platform.Surface in the dataframe) is a categorical trait describing the nature of the striking platform on the proximal portion of the lithic flake.
 
@@ -77,8 +79,62 @@ plot(df$Thickness, df$Width)
 -   [ ] Cite the paper as the data source as the last part of the report. Write something like 'Data source:' and then the paper, Chicago style. The paper can be found [here](https://doi.org/10.1371/journal.pone.0287490).
 -   [ ] Final task: rename the title and author of this quarto document (reminder, it's up top)
 
-## Report
+## Report - Natalie Eves
 
-<!--# this is where you'll drop in your report, following the instructions above marked as tasks. Be sure to drop them in order so they make sense -->
+-   Benjamin et al. recorded stone artifacts (n = 46 ) from "the continental shelf, located off the Murujuga coastline in north-western Australia." (Benjamin et al. 2020) The artifacts were dated to be in the range of 7000 cal BP - 8500 cal BP. They recorded traits such as color, width, and mass.
 
-### 
+### Traits:
+
+-   [ ] The color, width, and mass of each artifact was documented. Measurements of width were collected in centimeters. Measurements of mass were collected in grams. Both mass and width are continuous forms of data.
+
+    #### Qualitative Data:
+
+    ```{r}
+    #| label: tabulate categorical data 
+    table(df$Colour)
+    ```
+
+-   Color Breakdown:
+
+    -   Dark Grey - 18/46 (39.13%)
+
+    -   Grey - 13/46 (28.26%)
+
+    -   NA - 7/46 (15.22%)
+
+    -   Light Grey - 4/46 (8.70%)
+
+    -   Blue Gray - 2/46 (4.35%)
+
+    -   Black - 1/46 (2.17%)
+
+    -   Dark Green - 1/46 (2.17%)
+
+        #### Quantitative Data:
+
+```{r}
+#|: label: numeric data histogram
+hist(df$Width)
+```
+
+-   This histogram shows a unimodal distribution with a single peak at 6 - 8 centimeters. The distribution is roughly symmetrical.
+
+```{r}
+#|: label: numeric data histogram
+hist(df$Mass)
+```
+
+-   This histogram shows a unimodal distribution with a single peak between 0 - 200 grams. The distribution is skewed right.
+
+```{r}
+#|: label: numeric data scatterplot
+plot(df$Width, df$Mass)
+```
+
+-   Width on the x axis and mass on the y axis. The data appears to show a positive correlation.
+
+### Works Cited - Data Source:
+
+Benjamin, Jonathan, Michael O’Leary, Jo McDonald, Chelsea Wiseman, John McCarthy, Emma Beckett, Patrick Morrison, et al. “Aboriginal Artefacts on the Continental Shelf Reveal Ancient Drowned Cultural Landscapes in Northwest Australia.” *PLOS ONE* 15, no. 7 (July 1, 2020). https://doi.org/10.1371/journal.pone.0233912.
+
+-   I used citation machine to generate the citation.
